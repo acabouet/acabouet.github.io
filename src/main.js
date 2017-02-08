@@ -2,15 +2,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import MainNav from './components/MainNav'
 
-Vue.component('main-nav', {
-  data: function () {
-    return {
-      msg: 'Test'
-    }
-  },
-  template: '<div class="container"><input id="toggle" type="checkbox"><label class="toggle-container" for="toggle"><span class="button button-toggle"></span></label><nav class="nav"><a class="nav-item" href="">Home</a><a class="nav-item" href="">About Me</a><a class="nav-item" href="">Projects</a><a class="nav-item" href="">Contact</a></nav></div>'
-})
+Vue.component('main-nav', MainNav)
 
 /* eslint-disable no-new */
 new Vue({

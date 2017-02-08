@@ -5,22 +5,15 @@
       <span class="button button-toggle"></span>
     </label>
     <nav class="nav">
-      <a class="nav-item" href="">Home</a>
-      <a class="nav-item" href="">About Me</a>
-      <a class="nav-item" href="">Projects</a>
-      <a class="nav-item" href="">Contact</a>
+      <router-link to="/" class="nav-item">Home</router-link>
+      <router-link to="/about" class="nav-item">About Me</router-link>
+      <router-link to="/projects" class="nav-item">Projects</router-link>
+      <router-link to="/contact" class="nav-item">Get in Touch</router-link>
     </nav>
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'main-nav'
-  }
-</script>
-
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
- .nav {
-   border: 1px solid black;
- }
+
 </style>
