@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP Runtime" type="php">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </CLASSES>
+        <SOURCES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$USER_HOME$/.composer/vendor/composer" />
+          <root url="file://$USER_HOME$/.composer/vendor/consolidation/annotated-command" />
+          <root url="file://$USER_HOME$/.composer/vendor/consolidation/output-formatters" />
+          <root url="file://$USER_HOME$/.composer/vendor/cweagans/composer-patches" />
+          <root url="file://$USER_HOME$/.composer/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$USER_HOME$/.composer/vendor/drush/config-extra" />
+          <root url="file://$USER_HOME$/.composer/vendor/drush/drush" />
+          <root url="file://$USER_HOME$/.composer/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$USER_HOME$/.composer/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$USER_HOME$/.composer/vendor/nikic/php-parser" />
+          <root url="file://$USER_HOME$/.composer/vendor/pear/console_table" />
+          <root url="file://$USER_HOME$/.composer/vendor/php-console/php-console" />
+          <root url="file://$USER_HOME$/.composer/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$USER_HOME$/.composer/vendor/psr/log" />
+          <root url="file://$USER_HOME$/.composer/vendor/psy/psysh" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/console" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/debug" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/event-dispatcher" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/finder" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/var-dumper" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/yaml" />
+          <root url="file://$USER_HOME$/.composer/vendor/webmozart/assert" />
+          <root url="file://$USER_HOME$/.composer/vendor/webmozart/path-util" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$USER_HOME$/.composer/vendor/composer" />
+          <root url="file://$USER_HOME$/.composer/vendor/consolidation/annotated-command" />
+          <root url="file://$USER_HOME$/.composer/vendor/consolidation/output-formatters" />
+          <root url="file://$USER_HOME$/.composer/vendor/cweagans/composer-patches" />
+          <root url="file://$USER_HOME$/.composer/vendor/dnoegel/php-xdg-base-dir" />
+          <root url="file://$USER_HOME$/.composer/vendor/drush/config-extra" />
+          <root url="file://$USER_HOME$/.composer/vendor/drush/drush" />
+          <root url="file://$USER_HOME$/.composer/vendor/jakub-onderka/php-console-color" />
+          <root url="file://$USER_HOME$/.composer/vendor/jakub-onderka/php-console-highlighter" />
+          <root url="file://$USER_HOME$/.composer/vendor/nikic/php-parser" />
+          <root url="file://$USER_HOME$/.composer/vendor/pear/console_table" />
+          <root url="file://$USER_HOME$/.composer/vendor/php-console/php-console" />
+          <root url="file://$USER_HOME$/.composer/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$USER_HOME$/.composer/vendor/psr/log" />
+          <root url="file://$USER_HOME$/.composer/vendor/psy/psysh" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/console" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/debug" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/event-dispatcher" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/finder" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/var-dumper" />
+          <root url="file://$USER_HOME$/.composer/vendor/symfony/yaml" />
+          <root url="file://$USER_HOME$/.composer/vendor/webmozart/assert" />
+          <root url="file://$USER_HOME$/.composer/vendor/webmozart/path-util" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
