@@ -1,0 +1,28 @@
+// master.scss
+@import "kube";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: $text-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $font-size;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  padding: $base-line;
+}
