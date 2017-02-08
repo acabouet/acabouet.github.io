@@ -33,6 +33,7 @@ Temporary Items
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/*
 
 # Sensitive or high-churn files:
 .idea/dataSources/
@@ -72,7 +73,7 @@ fabric.properties
 
 .DS_Store
 node_modules/
-!dist/
+dist/
 npm-debug.log
 test/unit/coverage
 test/e2e/reports
