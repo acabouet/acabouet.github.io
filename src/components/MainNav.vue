@@ -1,10 +1,10 @@
 <template>
-  <div class="main-nav container">
+  <div class="main-nav container row">
     <input id="toggle" type="checkbox">
     <label class="toggle-container" for="toggle">
       <span class="button button-toggle"></span>
     </label>
-    <nav class="nav">
+    <nav class="nav col col-12">
       <router-link to="/" class="nav-item">Home</router-link>
       <router-link to="/about" class="nav-item">About Me</router-link>
       <router-link to="/projects" class="nav-item">Projects</router-link>

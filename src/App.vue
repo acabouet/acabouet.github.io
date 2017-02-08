@@ -3,6 +3,7 @@
     <main-nav></main-nav>
     <img src="./assets/logo.png">
     <router-view></router-view>
+    <main-footer></main-footer>
   </div>
 </template>
 
@@ -12,4 +13,4 @@ export default {
 }
 </script>
 
-<style src="./scss/global.scss" lang="scss"></style>
+<style src="./scss/global.scss" lang="scss"></style>n

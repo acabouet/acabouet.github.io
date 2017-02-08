@@ -1,6 +1,18 @@
 // master.scss
 @import "kube";
 
+//Vars
+
+//Font-Weights
+$regweight: 400;
+$boldweight: 700;
+
+//Colors
+$stormy: #494E6B;
+$cloud: #98878F;
+$sunset: #985E6D;
+$evening: #192231;
+
 * {
   box-sizing: border-box;
 }
@@ -14,15 +26,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: $font-size;
+  font-weight: $regweight;
+}
+
+h1, h2 {
+  font-weight: $boldweight;
 }
 
 a {
   text-decoration: none;
 }
 
-#app {
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  padding: $base-line;
+//Homepage Styles
+#content-grid {
+  @include grid-media-columns(2);
+  div {
+    background: $sunset;
+  }
+
+  & > div {
+    margin-bottom: 20px;
+    height: 80px;
+  }
+  & > div:nth-child(2n) {
+    height: 200px;
+  }
+
+  & > div:nth-child(5n) {
+    height: 20px;
+  }
+
 }
