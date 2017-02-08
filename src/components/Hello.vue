@@ -27,6 +27,11 @@ export default {
     return {
       msg: 'Adrienne Cabouet: Full Stack Dev'
     }
+  },
+  methods: {
+    changeMsg () {
+
+    }
   }
 }
 </script>
