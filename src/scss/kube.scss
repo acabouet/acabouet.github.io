@@ -30,9 +30,10 @@ $grid-gutter: 2% !default;
 
 // FONT FAMILY
 // ---------------------------------------------------------------------------
-$text-font-family: 'Work Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
+
+$text-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
 $monospace-font-family: Consolas, Monaco, 'Courier New', monospace !default;
-$headings-font-family: $text-font-family !default;
+$headings-font-family: 'Signika', 'Helvetica Neue', Helvetica, sans-serif !default;
 $buttons-font-family: $text-font-family !default;
 $input-font-family: $text-font-family !default;
 
@@ -46,24 +47,31 @@ $cloud: #98878F;
 $sunset: #985E6D;
 $evening: #192231;
 
+/* RGB */
+$color1: rgba(12, 9, 13, 1);
+$color2: rgba(255, 210, 63, 1);
+$color3: rgba(255, 186, 73, 1);
+$color4: rgba(244, 91, 105, 1);
+$color5: rgba(32, 163, 158, 1);
+
 // Text
 $color-text: $evening !default;
 $color-headings: $evening !default;
 
 // Links
-$color-link: $stormy !default;
-$color-link-hover: $sunset !default;
+$color-link: $color4 !default;
+$color-link-hover: $color5 !default;
 
 // Button
-$color-button-primary: $sunset !default;
+$color-button-primary: $color4 !default;
 $color-button-primary-text: #fff !default;
 $color-button-secondary: $cloud !default;
 $color-button-secondary-text: #fff !default;
 
 // States
-$color-error: #f03c69 !default;
-$color-success: #35beb1 !default;
-$color-warning: #f7ba45 !default;
+$color-error: $color4 !default;
+$color-success: $color5 !default;
+$color-warning: $color3 !default;
 $color-focus: $sunset !default;
 
 // Extra
@@ -71,7 +79,7 @@ $color-inverted: #fff !default;
 $color-highlight: #edf2ff !default; // color-focus 15% opacity
 
 // Grayscale
-$color-black: $evening !default;
+$color-black: $color1 !default;
 $color-darkgray: #313439 !default;
 $color-midgray: #676b72 !default;
 $color-gray: #bdbdbd !default;
@@ -103,6 +111,10 @@ $text-margin-bottom: $font-size !default;
 
 // HEADINGS
 // ---------------------------------------------------------------------------
+
+//Font-Weights
+$regweight: 400;
+$boldweight: 700;
 
 // Font Size
 // By default: 60, 48, 36, 24, 21, 18, 16
@@ -268,14 +280,19 @@ $overlay-background-color: rgba(#fff, .95);
 // Text
 @mixin text-font($font) {
     body {
-        font-family: #{$font};
+      font-family: #{$font};
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: $font-size;
+      font-weight: $regweight;
     }
 }
 
 // Headings
 @mixin headings-font($font) {
     h1.title, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-        font-family: #{$font};
+      font-family: #{$font};
+      font-weight: $boldweight;
     }
 }
 
