@@ -191,7 +191,8 @@
 
                   <figure class="text-center">
 
-                    <pre></pre>
+                    <pre><code>
+                    </code></pre>
 
                     <figcaption>
                       <p>A responsive custom Wordpress theme that harnesses the power of the awesome Advanced Custom Fields plugin, built with love for a client that needed complete control over every piece of content on their site and a user-friendly interface to edit it with.</p>
@@ -232,9 +233,29 @@
 
                   </div>
 
-                  <figure>
+                  <figure class="text-center">
 
-                    <pre></pre>
+                    <pre><code class="language-php">
+//Converts search box form input field from text to HTML5 search
+function clearesult_subsolar_preprocess_search_block_form(&$vars) {
+  $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
+}
+
+//Add a custom template for the subsolar residential sign up form for easier styling
+function clearesult_subsolar_theme($existing, $type, $theme, $path) {
+  $items['subsolar_form'] = array(
+      'render element' => 'form',
+      'template' => 'subsolar_form',
+      'path' => drupal_get_path('module', 'subsolar_form') . '/templates',
+  );
+  $items['subsolar_seasonal_form'] = array(
+      'render element' => 'form',
+      'template' => 'subsolar_seasonal_form',
+      'path' => drupal_get_path('module', 'subsolar_seasonal_form') . '/templates',
+  );
+
+  return $items;
+}</code></pre>
                     <figcaption>
                       <p>A slick 5-step AJAX backend deserves a clean and semantic HTML5 frontend built using the power of Drupal 7's template preprocessing hooks.</p>
                     </figcaption>
