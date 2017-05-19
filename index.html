@@ -1,31 +1,410 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <!-- Facebook -->
-  <meta property="fb:app_id" content=""> <!-- Fb app id goes here -->
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@onyesonwu_">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-  <!-- OpenGraph (Facebook, Twitter, LinkedIn and other site uses this protocol) -->
-  <meta property="og:site_name" content="Adrienne Cabouet">
-  <meta property="og:locale" content="es_US">
-  <meta property="og:url" content="https://acabouet.github.io">
-  <meta property="og:image" content="http://www.awesomeeee.com/img/logo-600-600.png"> <!-- Always use a image larger than 200x200 px -->
-  <meta property="og:title" content="Adrienne Cabouet: Full Stack Web Developer">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="A portfolio to showcase the web development work of Adrienne Cabouet, a full stack dev based in Portland, Oregon.">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Hind:400" rel="stylesheet" />
 
-  <meta name="author" content="Adrienne Cabouet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/kube.min.css">
+        <link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!--endbuild-->
 
-  <title>Adrienne Cabouet: Full Stack Web Developer</title>
-</head>
-<body>
-<div id="app"></div>
-<!-- built files will be auto injected -->
-</body>
+        <!--build:js js/main.min.js -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Main Nav -->
+        <section class="row navigation">
+
+            <div class="col col=12">
+                <nav id="livetabs" class="main-nav" data-component="tabs" data-live=".tab-live"></nav>
+            </div>
+
+        </section>
+
+        <!--Hero-->
+        <section class="row hero">
+
+            <div class="col col-12">
+
+                <div class="intro row gutters align-center">
+
+                    <div class="col col-3">
+                        <div class="headshot"></div>
+                    </div>
+
+                    <div class="col col-5 intro-copy">
+                        <h1 class="end title">Hi, I'm Adrienne!</h1>
+                        <h2 class="muted end">I build things for the internet.</h2>
+                        <h3 class="muted">(Pretty, easy to use things.)</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Code Samples Page-->
+        <section class="row align-center projects tab-live" id="tab-home" data-title="Code Samples">
+
+            <div class="col col-8">
+
+                <h2 class="end text-center">Frontend or Backend? Why Not Both?</h2>
+
+                <h3 class="muted text-center">Check out some samples of my code to see how I work in both worlds.</h3>
+
+                <hr>
+
+            </div>
+
+            <!--First Code Sample Start-->
+            <section id="project-collapse" data-component="collapse" class="col col-8">
+
+                <h4 class="accordion-heading">
+
+                    <a href="#box-1" class="collapse-toggle">
+
+                        <div class="group">
+
+                            <span class="float-left">Drupal & Ajax United for Multi-Step Sign Up Magic</span>
+                            <span class="caret down float-right"></span>
+
+                        </div>
+
+                    </a>
+
+                </h4>
+
+                <div class="collapse-box" id="box-1">
+
+                    <p>A slick 5-step web form with <em>no page refresh</em> built from scratch using the Drupal 7 Webform API, AJAX, and JSON data queried from a SOLR server, all rolled into a custom module for ease of deployment.</p>
+
+                    <pre>
+                        <code class="language-php">
+        //Get all the KWH Usage in one array
+        foreach($usage_data as $u){
+            array_push($all_kwh_usage, $u['kwh_usage']);
+        }
+
+        //Get Recommended blocks for this address to save to form storage
+        $recommended_blocks = get_recommended_blocks($all_kwh_usage);
+        _subsolar_form_session('rec_blocks', $recommended_blocks);
+
+        //Get max blocks for this address to save to form storage
+        $max_blocks = get_max_blocks($all_kwh_usage);
+        _subsolar_form_session('max_blocks', $max_blocks);
+
+        //Save selected address in form session
+        _subsolar_form_session('address', $usage_data[0]['user_address']);
+        _subsolar_form_session('site_id', $usage_data[0]['site_id']);
+        _subsolar_form_session('service_location_seq', $usage_data[0]['service_location_seq']);
+
+        //Save some stuff in Drupal settings to access outside of AJAX
+        drupal_add_js(array('usage_data' => $usage_data), 'setting');
+        drupal_add_js(array('recommended_blocks' => $recommended_blocks), 'setting');
+
+        //Send usage data and recommended block number for the selected address to subsolar_form.js
+        $commands = array();
+        $commands [] = array (
+            'command' => 'calculateOnAddressSelect',
+            'usage_data' => $usage_data,
+            'recommended_blocks' =>  $recommended_blocks,
+        );
+        return array('#type' => 'ajax', '#commands' => $commands);
+                        </code>
+                    </pre>
+
+                    <a href="https://github.com/acabouet/Solar-Calculator/tree/master/subsolar_form">See the Code</a>
+
+                    <ul class="tags">
+                        <li><span class="label tag">Drupal</span></li>
+                        <li><span class="label tag">AJAX</span></li>
+                        <li><span class="label tag">SOLR</span></li>
+                    </ul>
+                </div>
+                <!--First Code Sample End-->
+
+                <!--Second Code Sample Start-->
+                <h4 class="accordion-heading">
+
+                    <a href="#box-2" class="collapse-toggle">
+
+                        <div class="group">
+
+                            <span class="float-left">A Javascript Plugin for All Your Solar Calculating Needs</span>
+                            <span class="caret down float-right"></span>
+
+                        </div>
+
+                    </a>
+                </h4>
+
+                <div class="collapse-box hide" id="box-2">
+
+                    <p>The business logic behind that slick AJAX form, rolled into a jquery plugin.</p>
+
+                    <div class="group">
+
+                        <a href="https://github.com/acabouet/Solar-Calculator/blob/master/subsolar_form/js/subsolar_form.js" class="float=left">See the Code</a>
+
+                        <ul class="tags float-right">
+                            <li><span class="label tag">AJAX</span></li>
+                            <li><span class="label tag">Javascript</span></li>
+                            <li><span class="label tag">jQuery</span></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <!--Second Code Sample End-->
+
+                <!--Third Code Sample Start-->
+                <h4 class="accordion-heading">
+
+                    <a href="#box-3" class="collapse-toggle">
+
+                        <div class="group">
+                            <span class="float-left">Customize ALL THE THINGS with Wordpress and Advanced Custom Fields</span>
+                            <span class="caret down float-right"></span>
+                        </div>
+
+                    </a>
+
+                </h4>
+
+                <div class="collapse-box hide" id="box-3">
+                    <p>A responsive custom Wordpress theme that harnesses the power of the awesome Advanced Custom Fields plugin, built with love for a client that needed complete control over every piece of content on their site and a user-friendly interface to edit it with.</p>
+
+                    <pre>
+                        <code class="language-php">$terms = get_terms(
+                    array(
+                                'taxonomy' => 'staff_type',
+                                'hide_empty' => false,
+                            ) );// get all categories, but you can use any taxonomy
+                            $count = count($terms); //How many are they?
+                            if ( $count > 0 ){  //If there are more than 0 terms
+                                echo '<select class="filters-select" name="roles" id="roles">';
+                                echo '<option value="*" data-filter="*" class="selected">All Roles</option>';
+                                foreach ( $terms as $term ) {  //for each term:
+                                    echo "<option value='.{$term->slug}'>" . $term->name . "</option>";
+                                    //create a list item with the current term slug for sorting, and name for label
+                                }
+                                echo '</select>';
+                            }
+                        </code>
+                    </pre>
+
+                    <a href="#">See the Code</a>
+
+                    <ul class="tags">
+                        <li><span class="label tag">Wordpress</span></li>
+                        <li><span class="label tag">ACF</span></li>
+                        <li><span class="label tag">Custom Theming</span></li>
+                    </ul>
+
+                </div>
+                <!--Third Code Sample End-->
+
+                <!--Fourth Code Sample Start-->
+                <h4 class="accordion-heading end">
+
+                        <a href="#box-4" class="collapse-toggle">
+
+                            <div class="group">
+
+                                <span class="float-left">No More Div Soup: A Drupal Pre-Processing Story</span>
+                                <span class="caret down float-right"></span>
+
+                            </div>
+
+                        </a>
+
+                </h4>
+
+                <div class="collapse-box hide" id="box-4">
+
+                    <p>A slick 5-step AJAX backend deserves a clean and semantic HTML5 frontend built using the power of Drupal 7's template preprocessing hooks.</p>
+                    <pre>
+                        <code class="language-php">      //First the carousel
+      // Get the first item from the muli-value field collection
+      $raw_collection = $node_wrapper->field_hero_carousel[0]->value();
+      // Wrap field collection with Entity API
+      $carousel_collection = entity_metadata_wrapper('field_collection_item', $raw_collection);
+
+      //Hero carousel elements in variables for printing in the template
+      $variables['c_heading'] = $carousel_collection->field_heading->value();
+      $variables['c_desc'] = $carousel_collection->field_descripton[0]->value();
+
+      $images = $carousel_collection->field_image->value();
+      $i = 0;
+      foreach ($images as $img) {
+        $img_path = image_style_url('hero', $img['uri']);
+        $variables['heroes'][$i] = $img_path;
+        $i++;
+      }
+
+
+      //Next Call to Action Section
+      if($waitlist == true) {
+        $raw_collection_cta = $node_wrapper->field_call_to_action[1]->value();
+      } else {
+        $raw_collection_cta = $node_wrapper->field_call_to_action[0]->value();
+      }
+
+      $cta_collection = entity_metadata_wrapper('field_collection_item', $raw_collection_cta);
+
+      $variables['cta_heading'] = $cta_collection->field_heading->value();
+      $variables['cta_desc'] = $cta_collection->field_descripton[0]->value();
+
+      $buttons = $raw_collection_cta->field_button['und'];
+      $b = 0;
+      foreach ($buttons as $btn) {
+        $variables['btns'][$b] = $btn['value'];
+        $variables['btn_titles'][$b] = $btn['title'];
+        $b++;
+      }
+                        </code>
+                    </pre>
+
+                    <a href="#">See the Code</a>
+
+                    <ul class="tags">
+                        <li><span class="label tag">Drupal</span></li>
+                        <li><span class="label tag">Custom Theming</span></li>
+                        <li><span class="label tag">PHP</span></li>
+                    </ul>
+
+                </div>
+                <!--Fourth Code Sample End-->
+
+            </section>
+
+            <!--View Page Source CTA-->
+            <div class="col col-8">
+
+                <hr>
+
+                <h3 class="muted text-center">(Check out the source of this page too.)</h3>
+
+            </div>
+
+        </section>
+
+        <!--Side Projects Page-->
+        <section class="row align-center project-side tab-live" id="tab-side-project" data-title="Side Projects">
+
+            <div class="col col-8">
+
+                <h2 class="text-center">Side Projects</h2>
+
+                <hr>
+
+                <section class="row">
+
+                    <aside class="col col-4">
+
+                        <h3 class="end">In Other Words - Website</h3>
+
+                        <p>A Wordpress site for a Portland landmark and radical community space. Features a custom designed and developed theme and an event calendar with community
+                        event submission functionality. I built this website and help maintain it.</p>
+
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3 & SASS</li>
+                            <li>PHP</li>
+                            <li>WP-CLI</li>
+                            <li>NPM & Bower</li>
+                            <li>Grunt</Li>
+                        </ul>
+
+                        <a href="http://inotherwords.org">Visit the Site</a>
+
+                    </aside>
+
+                    <section class="col col-8">
+
+                        <img src="">
+
+                    </section>
+
+                </section>
+
+            </div>
+
+        </section>
+
+        <!--Contact Page-->
+        <section class="row align-center contact tab-live" id="tab-contact" data-title="Contact Me">
+
+            <div class="col col-8">
+
+                <h2 class="text-center">I'm easy to find!</h2>
+
+                <hr>
+
+                <p class="text-center">Wanna get in touch or talk about a project?</p>
+
+                <p class="text-center">
+                    <a href="mailto:acabouet@protonmail.com">Send me an email.</a>
+                </p>
+
+                <p class="text-center">
+                    <a href="https://github.com/acabouet">Find me on Github.</a>
+                </p>
+
+                <p class="text-center">
+                    <a href=https://www.linkedin.com/in/adriennecabouet>Check me out on LinkedIn.</a>
+                </p>
+
+            </div>
+
+        </section>
+
+        <!--Footer-->
+        <footer>
+
+            <h3 class="text-center">
+                <a href="AdrienneCabouet-Resume.pdf">Download My Resume</a>
+            </h3>
+
+        </footer>
+
+        <!--Javascript->
+        <!--build:js js/main.min.js -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/vendor/kube.js"></script>
+        <script src="js/vendor/prism.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
 </html>
 m
