@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Adrienne - Full Stack Web Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,8 +61,8 @@
 
         </section>
 
-        <!--Code Samples Page-->
-        <section class="row align-center projects tab-live" id="tab-home" data-title="Code Samples">
+        <!--Work Page-->
+        <section class="row align-center work tab-live" id="tab-home" data-title="Work">
 
             <div class="col col-8">
 
@@ -74,7 +74,7 @@
 
             </div>
 
-            <!--First Code Sample Start-->
+            <!--First Project Start-->
             <section id="project-collapse" data-component="collapse" class="col col-8">
 
                 <h4 class="accordion-heading">
@@ -92,56 +92,34 @@
 
                 </h4>
 
-                <div class="collapse-box" id="box-1">
+                <div class="collapse-box proj" id="box-1">
 
-                    <p>A slick 5-step web form with <em>no page refresh</em> built from scratch using the Drupal 7 Webform API, AJAX, and JSON data queried from a SOLR server, all rolled into a custom module for ease of deployment.</p>
+                  <figure class="text-center">
 
-                    <pre>
-                        <code class="language-php">
-        //Get all the KWH Usage in one array
-        foreach($usage_data as $u){
-            array_push($all_kwh_usage, $u['kwh_usage']);
-        }
+                    <img src="img/raw/solar-calc.png" alt="A screenshot of the solar app">
 
-        //Get Recommended blocks for this address to save to form storage
-        $recommended_blocks = get_recommended_blocks($all_kwh_usage);
-        _subsolar_form_session('rec_blocks', $recommended_blocks);
+                    <figcaption class="figure-caption">
+                      <p>A slick 5-step web form with <em>no page refresh</em> built from scratch using the Drupal 7 Webform API, AJAX, and JSON data queried from a SOLR server, all rolled into a custom module for ease of deployment.</p>
+                    </figcaption>
 
-        //Get max blocks for this address to save to form storage
-        $max_blocks = get_max_blocks($all_kwh_usage);
-        _subsolar_form_session('max_blocks', $max_blocks);
+                  </figure>
 
-        //Save selected address in form session
-        _subsolar_form_session('address', $usage_data[0]['user_address']);
-        _subsolar_form_session('site_id', $usage_data[0]['site_id']);
-        _subsolar_form_session('service_location_seq', $usage_data[0]['service_location_seq']);
+                  <div class="group">
 
-        //Save some stuff in Drupal settings to access outside of AJAX
-        drupal_add_js(array('usage_data' => $usage_data), 'setting');
-        drupal_add_js(array('recommended_blocks' => $recommended_blocks), 'setting');
+                    <a href="https://github.com/acabouet/Solar-Calculator/tree/master/subsolar_form" class="float-left">See the Code</a>
 
-        //Send usage data and recommended block number for the selected address to subsolar_form.js
-        $commands = array();
-        $commands [] = array (
-            'command' => 'calculateOnAddressSelect',
-            'usage_data' => $usage_data,
-            'recommended_blocks' =>  $recommended_blocks,
-        );
-        return array('#type' => 'ajax', '#commands' => $commands);
-                        </code>
-                    </pre>
-
-                    <a href="https://github.com/acabouet/Solar-Calculator/tree/master/subsolar_form">See the Code</a>
-
-                    <ul class="tags">
-                        <li><span class="label tag">Drupal</span></li>
-                        <li><span class="label tag">AJAX</span></li>
-                        <li><span class="label tag">SOLR</span></li>
+                    <ul class="tags float-right">
+                      <li><span class="label tag">Drupal</span></li>
+                      <li><span class="label tag">AJAX</span></li>
+                      <li><span class="label tag">SOLR</span></li>
                     </ul>
-                </div>
-                <!--First Code Sample End-->
 
-                <!--Second Code Sample Start-->
+                  </div>
+
+                </div>
+                <!--First Project End-->
+
+                <!--Second Project Start-->
                 <h4 class="accordion-heading">
 
                     <a href="#box-2" class="collapse-toggle">
@@ -158,11 +136,19 @@
 
                 <div class="collapse-box hide" id="box-2">
 
-                    <p>The business logic behind that slick AJAX form, rolled into a jquery plugin.</p>
+                  <figure class="text-center">
+
+                    <img src="img/raw/solar-app.png" alt="A screenshot of the solar app">
+
+                    <figcaption class="figure-caption">
+                      <p>The business logic behind that slick AJAX form, rolled into a jquery plugin.</p>
+                    </figcaption>
+
+                  </figure>
 
                     <div class="group">
 
-                        <a href="https://github.com/acabouet/Solar-Calculator/blob/master/subsolar_form/js/subsolar_form.js" class="float=left">See the Code</a>
+                        <a href="https://github.com/acabouet/Solar-Calculator/blob/master/subsolar_form/js/subsolar_form.js" class="float-left">See the Code</a>
 
                         <ul class="tags float-right">
                             <li><span class="label tag">AJAX</span></li>
@@ -173,9 +159,9 @@
                     </div>
 
                 </div>
-                <!--Second Code Sample End-->
+                <!--Second Project End-->
 
-                <!--Third Code Sample Start-->
+                <!--Third Project Start-->
                 <h4 class="accordion-heading">
 
                     <a href="#box-3" class="collapse-toggle">
@@ -192,25 +178,6 @@
                 <div class="collapse-box hide" id="box-3">
                     <p>A responsive custom Wordpress theme that harnesses the power of the awesome Advanced Custom Fields plugin, built with love for a client that needed complete control over every piece of content on their site and a user-friendly interface to edit it with.</p>
 
-                    <pre>
-                        <code class="language-php">$terms = get_terms(
-                    array(
-                                'taxonomy' => 'staff_type',
-                                'hide_empty' => false,
-                            ) );// get all categories, but you can use any taxonomy
-                            $count = count($terms); //How many are they?
-                            if ( $count > 0 ){  //If there are more than 0 terms
-                                echo '<select class="filters-select" name="roles" id="roles">';
-                                echo '<option value="*" data-filter="*" class="selected">All Roles</option>';
-                                foreach ( $terms as $term ) {  //for each term:
-                                    echo "<option value='.{$term->slug}'>" . $term->name . "</option>";
-                                    //create a list item with the current term slug for sorting, and name for label
-                                }
-                                echo '</select>';
-                            }
-                        </code>
-                    </pre>
-
                     <a href="#">See the Code</a>
 
                     <ul class="tags">
@@ -220,9 +187,9 @@
                     </ul>
 
                 </div>
-                <!--Third Code Sample End-->
+                <!--Third Project End-->
 
-                <!--Fourth Code Sample Start-->
+                <!--Fourth Project Start-->
                 <h4 class="accordion-heading end">
 
                         <a href="#box-4" class="collapse-toggle">
@@ -241,47 +208,6 @@
                 <div class="collapse-box hide" id="box-4">
 
                     <p>A slick 5-step AJAX backend deserves a clean and semantic HTML5 frontend built using the power of Drupal 7's template preprocessing hooks.</p>
-                    <pre>
-                        <code class="language-php">      //First the carousel
-      // Get the first item from the muli-value field collection
-      $raw_collection = $node_wrapper->field_hero_carousel[0]->value();
-      // Wrap field collection with Entity API
-      $carousel_collection = entity_metadata_wrapper('field_collection_item', $raw_collection);
-
-      //Hero carousel elements in variables for printing in the template
-      $variables['c_heading'] = $carousel_collection->field_heading->value();
-      $variables['c_desc'] = $carousel_collection->field_descripton[0]->value();
-
-      $images = $carousel_collection->field_image->value();
-      $i = 0;
-      foreach ($images as $img) {
-        $img_path = image_style_url('hero', $img['uri']);
-        $variables['heroes'][$i] = $img_path;
-        $i++;
-      }
-
-
-      //Next Call to Action Section
-      if($waitlist == true) {
-        $raw_collection_cta = $node_wrapper->field_call_to_action[1]->value();
-      } else {
-        $raw_collection_cta = $node_wrapper->field_call_to_action[0]->value();
-      }
-
-      $cta_collection = entity_metadata_wrapper('field_collection_item', $raw_collection_cta);
-
-      $variables['cta_heading'] = $cta_collection->field_heading->value();
-      $variables['cta_desc'] = $cta_collection->field_descripton[0]->value();
-
-      $buttons = $raw_collection_cta->field_button['und'];
-      $b = 0;
-      foreach ($buttons as $btn) {
-        $variables['btns'][$b] = $btn['value'];
-        $variables['btn_titles'][$b] = $btn['title'];
-        $b++;
-      }
-                        </code>
-                    </pre>
 
                     <a href="#">See the Code</a>
 
@@ -292,7 +218,7 @@
                     </ul>
 
                 </div>
-                <!--Fourth Code Sample End-->
+                <!--Fourth Project End-->
 
             </section>
 
