@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #FONTS
+   ========================================================================== */
+
+$text-font-family: 'Hind', 'Helvetica Neue', Helvetica, sans-serif;
+$headings-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+
+$black: rgba(4, 21, 31, 1);
+$green: rgba(24, 58, 55, 1);
+$beige: rgba(239, 214, 172, 1);
+$orange: rgba(196, 73, 0, 1);
+$purple: rgba(67, 37, 52, 1);
+
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+$space: 12px;
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+
+@mixin img-circular($size) {
+    width: $size;
+    height: $size;
+    background-size: cover;
+    display: block;
+    border-radius: $size/2;
+    -webkit-border-radius: $size/2;
+    -moz-border-radius: $size/2;
+}
+
+@mixin verticalcenter {
+    position: absolute;
+    top:50%;
+    left: 0%;
+    transform:translate(0%, -50%);
+    -webkit-transform:translate(0%, -50%);
+}
