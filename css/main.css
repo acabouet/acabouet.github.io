@@ -361,7 +361,18 @@ hr {
     transition: all linear 0.2s; }
   .accordion-heading .caret {
     color: #c44900;
-    font-weight: 800; }
+    font-weight: 800;
+    text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1); }
+
+/* ==========================================================================
+   #CONTACT PAGE
+   ========================================================================== */
+.contact h4 a {
+  color: #c44900; }
+  .contact h4 a:hover {
+    color: #432534;
+    -moz-transition: all linear 0.2s;
+    transition: all linear 0.2s; }
 
 /* ==========================================================================
    #FOOTER
