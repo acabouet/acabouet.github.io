@@ -20,6 +20,15 @@ h1, h2, h3, h4, h5, h6 {
   @include subtletextshadow;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $purple;
+  @include transition;
+}
+
 
 /* Sub-title
    ========================================================================== */
