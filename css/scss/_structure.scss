@@ -75,10 +75,10 @@ body {
     height: 70vh;
     max-height: 80vw;
 
-    @include breakpoint(sm) {
-        height: 150vh;
-        max-height: 150vw;
-    }
+    //@include breakpoint(sm) {
+    //    height: 150vh;
+    //    max-height: 150vw;
+    //}
 
     background: $orange;
 

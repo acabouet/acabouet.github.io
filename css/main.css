@@ -298,10 +298,6 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media (max-width: 768px) {
-    .hero {
-      height: 150vh;
-      max-height: 150vw; } }
 
 .intro {
   padding: 12px; }
