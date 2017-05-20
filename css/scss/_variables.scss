@@ -41,3 +41,11 @@ $space: 12px;
     transform:translate(0%, -50%);
     -webkit-transform:translate(0%, -50%);
 }
+
+@mixin subtletextshadow {
+  text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
+}
+
+@mixin hardtextshadow {
+  text-shadow: -2px 4px 0 rgba(0,0,0,0.3);
+}

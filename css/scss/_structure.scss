@@ -16,6 +16,10 @@
 @include buttons-font($text-font-family);
 @include inputs-font($text-font-family);
 
+h1, h2, h3, h4, h5, h6 {
+  @include subtletextshadow;
+}
+
 
 /* Sub-title
    ========================================================================== */
@@ -43,21 +47,22 @@ body {
 }
 
 .main-nav {
-    ul {
-        li {
-            display: inline;
-            padding: $space;
-            a {
-                font-family: $headings-font-family;
-                text-decoration: none;
-                color: $beige;
-                &:hover {
-                    color: $orange;
-                    @include transition(all .2s ease-in-out);
-                }
+  ul {
+      li {
+          display: inline;
+          padding: $space;
+          a {
+            font-family: $headings-font-family;
+            @include subtletextshadow;
+            text-decoration: none;
+            color: $beige;
+            &:hover {
+                color: $orange;
+                @include transition(all .2s ease-in-out);
             }
-        }
-    }
+          }
+      }
+  }
 }
 
 .hero {
@@ -88,12 +93,11 @@ body {
 }
 
 .intro {
-    padding: $space;
-
-    h1, h2 {
-        color: $beige;
-    }
-
+  padding: $space;
+  h1, h2 {
+    color: $beige;
+    @include hardtextshadow;
+  }
 }
 
 .intro-copy {
@@ -142,20 +146,46 @@ hr {
 }
 
 .accordion-heading {
-    display: block;
-    background: $purple;
+  display: block;
+  background: $purple;
+  color: white;
+  padding: $space * 2;
+
+  a {
+      text-decoration: none;
+      &:hover {
+          color: inherit;
+      }
+  }
+
+  &:hover {
+      background: lighten($purple, 3%);
+      @include transition;
+  }
+
+  .caret {
+    color: $orange;
+    font-weight: 800;
+  }
+}
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+footer {
+  background: $orange;
+  padding: $space;
+  a {
+    text-decoration: none;
     color: white;
-    padding: $space * 2;
-
-    a {
-        text-decoration: none;
-        &:hover {
-            color: inherit;
-        }
-    }
-
     &:hover {
-        background: lighten($purple, 3%);
-        @include transition;
+      color: white;
     }
+  }
+
+  &:hover {
+    background: $purple;
+    @include transition;
+  }
 }

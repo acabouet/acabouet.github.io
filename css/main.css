@@ -242,6 +242,9 @@ button, .button {
 input, textarea, select {
   font-family: Hind, Helvetica Neue, Helvetica, sans-serif; }
 
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1); }
+
 /* Sub-title
    ========================================================================== */
 /* ==========================================================================
@@ -266,6 +269,7 @@ body {
   padding: 12px; }
   .main-nav ul li a {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+    text-shadow: -0.0375em 0 0 rgba(48, 48, 48, 0.1);
     text-decoration: none;
     color: #efd6ac; }
     .main-nav ul li a:hover {
@@ -297,7 +301,8 @@ body {
 .intro {
   padding: 12px; }
   .intro h1, .intro h2 {
-    color: #efd6ac; }
+    color: #efd6ac;
+    text-shadow: -2px 4px 0 rgba(0, 0, 0, 0.3); }
 
 @media (min-width: 1200px) {
   .intro-copy {
@@ -352,5 +357,24 @@ hr {
       color: inherit; }
   .accordion-heading:hover {
     background: #4d2a3c;
+    -moz-transition: all linear 0.2s;
+    transition: all linear 0.2s; }
+  .accordion-heading .caret {
+    color: #c44900;
+    font-weight: 800; }
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+footer {
+  background: #c44900;
+  padding: 12px; }
+  footer a {
+    text-decoration: none;
+    color: white; }
+    footer a:hover {
+      color: white; }
+  footer:hover {
+    background: #432534;
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s; }
