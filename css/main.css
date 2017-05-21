@@ -374,9 +374,9 @@ hr {
 /* ==========================================================================
    #CONTACT PAGE
    ========================================================================== */
-.contact h4 a {
+.contact h4 a, .more-work h4 a {
   color: #c44900; }
-  .contact h4 a:hover {
+  .contact h4 a:hover, .more-work h4 a:hover {
     color: #432534;
     -moz-transition: all linear 0.2s;
     transition: all linear 0.2s; }
